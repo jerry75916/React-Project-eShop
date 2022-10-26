@@ -1,0 +1,51 @@
+.ConfirmBox{
+  width:50rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 1000;
+  margin: 0 auto;
+  position: absolute;
+  content: '';
+  left:50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.Confirm_Header{
+  background: rgb(65, 65, 66);
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid;
+}
+.Confirm_Content{
+    text-align: center;
+    background: rgb(250, 250, 252);
+    color: rgb(7, 7, 7);
+    font-size: 2rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid;
+    & img{
+       
+        width: 10rem;
+        height: 10rem;
+    }
+}
+.Confirm_Footer{
+    display: flex;
+    background: rgb(250, 250, 252);
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+.Confirm_Over{ 
+  content: '';
+  z-index: 1;
+  background:rgba(0,0,0,0.5);
+  left:0;
+  bottom: 0;
+  width:100%;
+  height:100%;
+  position: fixed;
+  
+}
