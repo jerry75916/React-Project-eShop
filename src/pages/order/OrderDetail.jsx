@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./OrderDetail.module.scss";
 import { useParams } from "react-router-dom";
-import useFetchDocument from "../../customHooks/useFetchDocument";
 import Loader from "../../Component/loader/Loader";
 import { Link } from "react-router-dom";
 import { fetchOrderById } from "../../redux/slice/orderSlice";
-import { selectSingleOrder } from "../../redux/slice/orderSlice";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 

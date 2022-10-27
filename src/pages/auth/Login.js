@@ -37,7 +37,6 @@ const Login = () => {
     setisLoading(true);
     signInWithEmailAndPassword(auth, currentEmail, currentPassword)
       .then((userCredential) => {
-        const user = userCredential.user;
         setisLoading(false);
         toast.success("login Successful!!");
         autoNavigate();

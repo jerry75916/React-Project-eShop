@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import styles from "./ReviewProducts.module.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { selectProducts } from "../../redux/slice/productSlice";
+import { useSelector } from "react-redux";
 import { selectuserID, selectuserName } from "../../redux/slice/authSlice";
 import { useParams } from "react-router-dom";
 import Card from "../../Component/card/Card";
@@ -12,9 +11,6 @@ import { toast } from "react-toastify";
 import useFetchDocument from "../../customHooks/useFetchDocument";
 import { useEffect } from "react";
 import Loader from "../../Component/loader/Loader";
-
-
-
 
 const ReviewProduct = () => {
   const { id } = useParams();
@@ -49,7 +45,6 @@ const ReviewProduct = () => {
       textContent.current.value = "";
       toast.success("Review submitted success!");
     } catch (e) {
-   
       toast.error(e.message);
     }
   };

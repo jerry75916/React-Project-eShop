@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AdminOnlyRoute, {
-  AdminOnlyLink,
-} from "./Component/AdminOnlyRoute/AdminOnlyRoute";
+import AdminOnlyRoute from "./Component/AdminOnlyRoute/AdminOnlyRoute";
 
 //component
 import {
@@ -31,6 +29,7 @@ import {
   Orderhistory,
   OrderDetail,
   ReviewProduct,
+  NotFound,
 } from "./pages/";
 
 const App = () => {
@@ -65,13 +64,14 @@ const App = () => {
             path="/product-details/:id"
             element={<ProductDetails />}
           ></Route>
+          <Route path="/review-product/:id" element={<ReviewProduct />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/checkout-details" element={<CheckOutDetails />}></Route>
           <Route path="/checkout" element={<CheckOut />}></Route>
           <Route path="/checkout-success" element={<CheckOutSuccess />}></Route>
           <Route path="/order-history" element={<Orderhistory />}></Route>
           <Route path="/order-details/:id" element={<OrderDetail />}></Route>
-          <Route path="/review-product/:id" element={<ReviewProduct />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
         <Footer />
       </Router>

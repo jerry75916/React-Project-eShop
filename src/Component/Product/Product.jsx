@@ -8,7 +8,6 @@ import { selectProducts, STORE_PRODUCTS } from "../../redux/slice/productSlice";
 import { GET_PRICE_RANGE } from "../../redux/slice/productSlice";
 import Loader from "../loader/Loader";
 import { FaCogs } from "react-icons/fa";
-import Pagination from "../pagation/Pagination";
 const Product = () => {
   const { data, isLoading } = useFetchCollection("products");
   const Products = useSelector(selectProducts);
